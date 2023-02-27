@@ -1,0 +1,13 @@
+<div>
+  <label> First Name: <input #firstNameInput type="text"></label><br>
+  <label> Last Name: <input #lastNameInput type="text"></label><br>
+  <label> Stage Name: <input #stageNameInput type="text"></label><br>
+  <label> Activity Start Date: <input #activityStartDate type="text"></label><br>
+  <label> Activity End Date: <input #activityEndDate type="text"></label><br>
+</div>
+<div>
+  <button
+    (click)="onSave(firstNameInput.value, lastNameInput.value,stageNameInput.value, activityStartDate.value, activityEndDate.value)">
+    Save
+  </button>
+</div>

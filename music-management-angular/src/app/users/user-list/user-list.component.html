@@ -1,0 +1,14 @@
+<div *ngIf="selectedUser">
+  <h2>
+    {{selectedUser.firstName | uppercase}} {{selectedUser.lastName | uppercase}} was selected
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
+
+<h2>Users</h2>
+<ul class="users">
+  <li *ngFor="let user of users" [class.selected]="user === selectedUser" (click)="onSelect(user)">
+    id: {{user.id}}<br>first name: {{user.firstName}}<br>last name: {{user.lastName}}<br>
+    <button (click)="onDelete(user)">Delete</button>
+  </li>
+</ul>

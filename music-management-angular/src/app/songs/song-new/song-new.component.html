@@ -1,0 +1,11 @@
+<div>
+  <label> Title: <input #titleInput type="text"></label><br>
+  <label> AlbumId: <input #albumIdInput type="text"></label><br>
+  <label> Time: <input #timeInput type="text"></label><br>
+</div>
+<div>
+  <button
+    (click)="onSave(titleInput.value,albumIdInput.value,timeInput.value)">
+    Save
+  </button>
+</div>

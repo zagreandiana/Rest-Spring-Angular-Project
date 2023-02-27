@@ -1,0 +1,15 @@
+<div *ngIf="selectedSong">
+  <h2>
+    {{selectedSong.title | uppercase}} {{selectedSong.albumId | uppercase}} | {{selectedSong.time | uppercase}} was
+    selected
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
+
+<h2>Songs</h2>
+<ul class="songs">
+  <li *ngFor="let song of songs" [class.selected]="song === selectedSong" (click)="onSelect(song)">
+    song id: {{song.id}} <br> song title: {{song.title}}<br>song length: {{song.time}}<br>album id: {{song.albumId}}
+    <button (click)="onDelete(song)">Delete</button>
+  </li>
+</ul>
