@@ -2,3 +2,4 @@
 
 Backend with java and spring;
 Frontend with angular (html, css, TypeScript)
+Gradle, REST, Tomcat
