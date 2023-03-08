@@ -9,6 +9,8 @@ import java.sql.Date;
 @Getter
 @Setter
 @Builder
+@ToString
+
 public class AlbumDto extends BaseDto {
     private String title;
     private String genre;
@@ -16,15 +18,5 @@ public class AlbumDto extends BaseDto {
     private Long band_id;
     private Date release_date;
 
-    @Override
-    public String toString() {
-        return "Albums{" +
-                "id='" + id + '\'' +
-                ", title='" + title + '\'' +
-                ", genre=" + genre +
-                ", artist_id=" + artist_id +
-                ", band_id=" + band_id +
-                ", release_date=" + release_date +
-                '}';
-    }
+
 }

@@ -9,18 +9,12 @@ import java.sql.Time;
 @Getter
 @Setter
 @Builder
+@ToString
+
 public class SongDto extends BaseDto {
     private String title;
     private Integer albumId;
     private Time time;
 
-    @Override
-    public String toString() {
-        return "SongDto{" +
-                "title='" + title + '\'' +
-                ", albumId=" + albumId +
-                ", time=" + time +
-                ", id=" + id +
-                '}';
-    }
+
 }

@@ -9,6 +9,8 @@ import java.util.Date;
 @Getter
 @Setter
 @Builder
+@ToString
+
 public class BandDto extends BaseDto {
 
     private String name;
@@ -17,13 +19,5 @@ public class BandDto extends BaseDto {
 
     private Date activityEndData;
 
-    @Override
-    public String toString() {
-        return "BandDto{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", activityStartData=" + activityStartData +
-                ", activityEndData=" + activityEndData +
-                '}';
-    }
+
 }

@@ -9,6 +9,8 @@ import ro.ubb.catalog.web.utils.UserStatuses;
 @Getter
 @Setter
 @Builder
+@ToString
+
 public class UserDto extends BaseDto {
     private String firstName;
     private String lastName;
@@ -17,15 +19,5 @@ public class UserDto extends BaseDto {
     private UserRoles role;
     private UserStatuses status;
 
-    @Override
-    public String toString() {
-        return "UserDto{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", role=" + role +
-                ", status=" + status +
-                '}';
-    }
+
 }
