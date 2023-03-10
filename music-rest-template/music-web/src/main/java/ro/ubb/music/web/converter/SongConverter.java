@@ -1,8 +1,8 @@
 package ro.ubb.music.web.converter;
 
 import org.springframework.stereotype.Component;
-import ro.ubb.catalog.core.model.Song;
-import ro.ubb.catalog.web.dto.SongDto;
+import ro.ubb.music.core.model.Song;
+import ro.ubb.music.web.dto.SongDto;
 
 @Component
 public class SongConverter extends BaseConverter<Song, SongDto> {

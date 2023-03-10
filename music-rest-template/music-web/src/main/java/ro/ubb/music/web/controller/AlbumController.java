@@ -4,12 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ro.ubb.catalog.core.exceptions.ServiceException;
-import ro.ubb.catalog.core.model.Album;
-import ro.ubb.catalog.core.service.AlbumService;
-import ro.ubb.catalog.web.converter.AlbumConvertor;
-import ro.ubb.catalog.web.dto.AlbumDto;
-import ro.ubb.catalog.web.dto.AlbumDtos;
+import ro.ubb.music.core.exceptions.ServiceException;
+import ro.ubb.music.core.model.Album;
+import ro.ubb.music.core.service.AlbumService;
+import ro.ubb.music.web.converter.AlbumConvertor;
+import ro.ubb.music.web.dto.AlbumDto;
+import ro.ubb.music.web.dto.AlbumDtos;
 
 import java.util.List;
 import java.util.Set;

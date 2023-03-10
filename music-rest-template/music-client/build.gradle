@@ -1,5 +1,5 @@
 dependencies {
-    implementation project(':catalog-web')
+    implementation project(':music-web')
 
     implementation group: 'org.springframework', name: 'spring-web', version: "$springVersion"
 

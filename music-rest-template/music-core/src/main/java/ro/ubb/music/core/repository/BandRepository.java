@@ -1,7 +1,7 @@
 package ro.ubb.music.core.repository;
 
 
-import ro.ubb.catalog.core.model.Band;
+import ro.ubb.music.core.model.Band;
 
 import java.sql.Date;
 import java.util.List;

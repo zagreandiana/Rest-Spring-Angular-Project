@@ -4,9 +4,9 @@ import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import ro.ubb.catalog.web.dto.*;
-import ro.ubb.catalog.web.utils.UserRoles;
-import ro.ubb.catalog.web.utils.UserStatuses;
+import ro.ubb.music.web.dto.*;
+import ro.ubb.music.web.utils.UserRoles;
+import ro.ubb.music.web.utils.UserStatuses;
 
 import java.sql.Date;
 import java.sql.Time;

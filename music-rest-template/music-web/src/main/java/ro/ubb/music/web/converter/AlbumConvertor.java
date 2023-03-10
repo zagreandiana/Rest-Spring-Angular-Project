@@ -1,8 +1,8 @@
 package ro.ubb.music.web.converter;
 
 import org.springframework.stereotype.Component;
-import ro.ubb.catalog.core.model.Album;
-import ro.ubb.catalog.web.dto.AlbumDto;
+import ro.ubb.music.core.model.Album;
+import ro.ubb.music.web.dto.AlbumDto;
 
 @Component
 public class AlbumConvertor extends BaseConverter<Album, AlbumDto> {

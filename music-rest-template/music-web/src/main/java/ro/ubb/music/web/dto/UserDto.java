@@ -1,8 +1,8 @@
 package ro.ubb.music.web.dto;
 
 import lombok.*;
-import ro.ubb.catalog.web.utils.UserRoles;
-import ro.ubb.catalog.web.utils.UserStatuses;
+import ro.ubb.music.web.utils.UserRoles;
+import ro.ubb.music.web.utils.UserStatuses;
 
 @NoArgsConstructor
 @AllArgsConstructor

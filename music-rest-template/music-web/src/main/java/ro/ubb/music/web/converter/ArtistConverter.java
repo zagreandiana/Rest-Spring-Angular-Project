@@ -1,10 +1,10 @@
 package ro.ubb.music.web.converter;
 
 import org.springframework.stereotype.Component;
-import ro.ubb.catalog.core.model.Artist;
-import ro.ubb.catalog.core.model.User;
-import ro.ubb.catalog.web.dto.ArtistDto;
-import ro.ubb.catalog.web.dto.UserDto;
+import ro.ubb.music.core.model.Artist;
+import ro.ubb.music.core.model.User;
+import ro.ubb.music.web.dto.ArtistDto;
+import ro.ubb.music.web.dto.UserDto;
 
 @Component
 public class ArtistConverter  extends BaseConverter<Artist, ArtistDto>{

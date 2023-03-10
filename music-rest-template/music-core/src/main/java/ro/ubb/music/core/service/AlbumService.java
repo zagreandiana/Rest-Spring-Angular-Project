@@ -1,7 +1,7 @@
 package ro.ubb.music.core.service;
 
 
-import ro.ubb.catalog.core.model.Album;
+import ro.ubb.music.core.model.Album;
 
 import java.util.List;
 

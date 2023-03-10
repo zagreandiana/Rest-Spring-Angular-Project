@@ -5,12 +5,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ro.ubb.catalog.core.exceptions.ServiceException;
-import ro.ubb.catalog.core.model.User;
-import ro.ubb.catalog.core.repository.UserRepository;
-import ro.ubb.catalog.core.utils.ExceptionMessages;
-import ro.ubb.catalog.core.utils.UserRoles;
-import ro.ubb.catalog.core.utils.UserStatuses;
+import ro.ubb.music.core.exceptions.ServiceException;
+import ro.ubb.music.core.model.User;
+import ro.ubb.music.core.repository.UserRepository;
+import ro.ubb.music.core.utils.ExceptionMessages;
+import ro.ubb.music.core.utils.UserRoles;
+import ro.ubb.music.core.utils.UserStatuses;
 
 import java.util.List;
 import java.util.Optional;

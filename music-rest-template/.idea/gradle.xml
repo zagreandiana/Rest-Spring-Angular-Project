@@ -9,9 +9,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/catalog-client" />
-            <option value="$PROJECT_DIR$/catalog-core" />
-            <option value="$PROJECT_DIR$/catalog-web" />
+            <option value="$PROJECT_DIR$/music-client" />
+            <option value="$PROJECT_DIR$/music-core" />
+            <option value="$PROJECT_DIR$/music-web" />
           </set>
         </option>
       </GradleProjectSettings>

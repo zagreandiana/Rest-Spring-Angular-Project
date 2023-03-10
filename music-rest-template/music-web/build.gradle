@@ -1,7 +1,7 @@
 apply plugin: 'war'
 
 dependencies {
-    implementation project(':catalog-core')
+    implementation project(':music-core')
 
     implementation group: 'org.springframework', name: 'spring-webmvc', version: "$springVersion"
 

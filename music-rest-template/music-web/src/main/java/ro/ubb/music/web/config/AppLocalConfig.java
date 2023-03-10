@@ -2,7 +2,7 @@ package ro.ubb.music.web.config;
 
 import org.springframework.context.annotation.*;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
-import ro.ubb.catalog.core.config.JPAConfig;
+import ro.ubb.music.core.config.JPAConfig;
 
 
 @Configuration

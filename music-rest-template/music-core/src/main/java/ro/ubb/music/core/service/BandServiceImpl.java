@@ -6,11 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ro.ubb.catalog.core.exceptions.ServiceException;
-import ro.ubb.catalog.core.model.Band;
-import ro.ubb.catalog.core.model.User;
-import ro.ubb.catalog.core.repository.BandRepository;
-import ro.ubb.catalog.core.utils.ExceptionMessages;
+import ro.ubb.music.core.exceptions.ServiceException;
+import ro.ubb.music.core.model.Band;
+import ro.ubb.music.core.model.User;
+import ro.ubb.music.core.repository.BandRepository;
+import ro.ubb.music.core.utils.ExceptionMessages;
 
 
 import java.beans.Transient;

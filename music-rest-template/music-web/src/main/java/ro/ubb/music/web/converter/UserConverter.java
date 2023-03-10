@@ -1,10 +1,10 @@
 package ro.ubb.music.web.converter;
 
 import org.springframework.stereotype.Component;
-import ro.ubb.catalog.core.model.User;
-import ro.ubb.catalog.core.utils.UserRoles;
-import ro.ubb.catalog.core.utils.UserStatuses;
-import ro.ubb.catalog.web.dto.UserDto;
+import ro.ubb.music.core.model.User;
+import ro.ubb.music.core.utils.UserRoles;
+import ro.ubb.music.core.utils.UserStatuses;
+import ro.ubb.music.web.dto.UserDto;
 
 @Component
 public class UserConverter extends BaseConverter<User, UserDto> {
@@ -30,8 +30,8 @@ public class UserConverter extends BaseConverter<User, UserDto> {
                 .lastName(user.getLastName())
                 .email(user.getEmail())
                 .password(user.getPassword())
-                .role(ro.ubb.catalog.web.utils.UserRoles.of(user.getRole().name()))
-                .status(ro.ubb.catalog.web.utils.UserStatuses.of(user.getStatus().name()))
+                .role(ro.ubb.music.web.utils.UserRoles.of(user.getRole().name()))
+                .status(ro.ubb.music.web.utils.UserStatuses.of(user.getStatus().name()))
                 .build();
         dto.setId(user.getId());
 

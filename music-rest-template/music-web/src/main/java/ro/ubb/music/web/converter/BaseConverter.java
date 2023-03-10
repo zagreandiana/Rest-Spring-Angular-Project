@@ -1,7 +1,7 @@
 package ro.ubb.music.web.converter;
 
-import ro.ubb.catalog.core.model.BaseEntity;
-import ro.ubb.catalog.web.dto.BaseDto;
+import ro.ubb.music.core.model.BaseEntity;
+import ro.ubb.music.web.dto.BaseDto;
 
 import java.util.Collection;
 import java.util.Set;

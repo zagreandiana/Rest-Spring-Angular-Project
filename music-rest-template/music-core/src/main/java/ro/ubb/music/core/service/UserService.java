@@ -1,9 +1,9 @@
 package ro.ubb.music.core.service;
 
 
-import ro.ubb.catalog.core.model.User;
-import ro.ubb.catalog.core.utils.UserRoles;
-import ro.ubb.catalog.core.utils.UserStatuses;
+import ro.ubb.music.core.model.User;
+import ro.ubb.music.core.utils.UserRoles;
+import ro.ubb.music.core.utils.UserStatuses;
 
 import java.util.List;
 

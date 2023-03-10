@@ -4,10 +4,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ro.ubb.catalog.core.exceptions.ServiceException;
-import ro.ubb.catalog.core.model.Song;
-import ro.ubb.catalog.core.repository.SongRepository;
-import ro.ubb.catalog.core.utils.ExceptionMessages;
+import ro.ubb.music.core.exceptions.ServiceException;
+import ro.ubb.music.core.model.Song;
+import ro.ubb.music.core.repository.SongRepository;
+import ro.ubb.music.core.utils.ExceptionMessages;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,5 +1,5 @@
 allprojects {
-    group 'ro.ubb.music-rest-template'
+    group 'ro.ubb.catalog-rest-template'
     version '1.0-SNAPSHOT'
 
     apply plugin: 'java'

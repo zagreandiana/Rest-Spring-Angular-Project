@@ -1,7 +1,7 @@
 package ro.ubb.music.client;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import ro.ubb.catalog.client.ui.TextUi;
+import ro.ubb.music.client.ui.TextUi;
 
 
 public class ClientApp {

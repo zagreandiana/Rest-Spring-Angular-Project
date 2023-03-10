@@ -3,7 +3,7 @@ package ro.ubb.music.core.repository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import ro.ubb.catalog.core.model.Album;
+import ro.ubb.music.core.model.Album;
 
 import java.util.List;
 

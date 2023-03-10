@@ -1,5 +1,5 @@
 rootProject.name = 'catalog-rest-template'
-include 'catalog-core'
-include 'catalog-web'
-include 'catalog-client'
+include 'music-core'
+include 'music-web'
+include 'music-client'
 

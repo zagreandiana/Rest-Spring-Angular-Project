@@ -2,7 +2,7 @@ package ro.ubb.music.core.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.NoRepositoryBean;
-import ro.ubb.catalog.core.model.BaseEntity;
+import ro.ubb.music.core.model.BaseEntity;
 
 import java.io.Serializable;
 

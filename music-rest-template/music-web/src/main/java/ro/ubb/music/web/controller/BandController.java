@@ -4,12 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ro.ubb.catalog.core.exceptions.ServiceException;
-import ro.ubb.catalog.core.model.Band;
-import ro.ubb.catalog.core.service.BandService;
-import ro.ubb.catalog.web.converter.BandConverter;
-import ro.ubb.catalog.web.dto.BandDto;
-import ro.ubb.catalog.web.dto.BandDtos;
+import ro.ubb.music.core.exceptions.ServiceException;
+import ro.ubb.music.core.model.Band;
+import ro.ubb.music.core.service.BandService;
+import ro.ubb.music.web.converter.BandConverter;
+import ro.ubb.music.web.dto.BandDto;
+import ro.ubb.music.web.dto.BandDtos;
 
 import java.util.List;
 import java.util.Set;

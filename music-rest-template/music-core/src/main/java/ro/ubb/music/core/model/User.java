@@ -1,8 +1,8 @@
 package ro.ubb.music.core.model;
 
 import lombok.*;
-import ro.ubb.catalog.core.utils.UserRoles;
-import ro.ubb.catalog.core.utils.UserStatuses;
+import ro.ubb.music.core.utils.UserRoles;
+import ro.ubb.music.core.utils.UserStatuses;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
