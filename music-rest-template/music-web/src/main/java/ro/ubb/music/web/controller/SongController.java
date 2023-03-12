@@ -48,21 +48,21 @@ public class SongController {
             return new ResponseEntity<>(songDtos, HttpStatus.OK);
         }
     }
-/*    @PostMapping()
-    ResponseEntity<SongDtos> saveSong(@RequestBody SongDto songDto) {
-        Song song = songConverter.convertDtoToModel(songDto);
-        try {
-            Song savedSong = songService.create(song);
-            SongDto savedDto = songConverter.convertModelToDto(savedSong);
-            SongDtos songResponse = new SongDtos();
-            songResponse.setSongDtoSet(Set.of(savedDto));
-
-            return new ResponseEntity<>(songResponse, HttpStatus.OK);
-        } catch (ServiceException e) {
-            SongDtos songResponse = new SongDtos();
-            return new ResponseEntity<>(songResponse, HttpStatus.OK);
-        }
-    }*/
+//    @PostMapping()
+//    ResponseEntity<SongDtos> saveSong(@RequestBody SongDto songDto) {
+//        Song song = songConverter.convertDtoToModel(songDto);
+//        try {
+//            Song savedSong = songService.create(song);
+//            SongDto savedDto = songConverter.convertModelToDto(savedSong);
+//            SongDtos songResponse = new SongDtos();
+//            songResponse.setSongDtoSet(Set.of(savedDto));
+//
+//            return new ResponseEntity<>(songResponse, HttpStatus.OK);
+//        } catch (ServiceException e) {
+//            SongDtos songResponse = new SongDtos();
+//            return new ResponseEntity<>(songResponse, HttpStatus.OK);
+//        }
+//    }
 
     @PostMapping()
     SongDto saveSong(@RequestBody SongDto songDto) {

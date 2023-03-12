@@ -25,6 +25,10 @@ public class ArtistController {
     private ArtistConverter artistConverter;
 
 
+//  another version for GetMapping is RequestMapping and specifying the method (RequestMethod.GET)
+//  @RequestMapping(value = "artists", method = RequestMethod.GET)
+//  but GetMapping is better
+
     @GetMapping()
     ResponseEntity<ArtistResponse> getArtists() {
         List<Artist> artists = artistService.readAll();

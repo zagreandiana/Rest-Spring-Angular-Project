@@ -51,16 +51,6 @@ public class BandController {
         return new ResponseEntity<>(new BandDtos(bandDtos), HttpStatus.OK);
     }
 
-//
-//    @GetMapping(value = "/status={status}")
-//    ResponseEntity<UserDtos> getUsersByStatus(@PathVariable String status) {
-//        UserStatuses userStatus = UserStatuses.of(status);
-//        List<User> users = userService.readAll(userStatus);
-//
-//        Set<UserDto> dtoSet = userConverter.convertModelsToDtos(users);
-//
-//        return new ResponseEntity<>(new UserDtos(dtoSet), HttpStatus.OK);
-//    }
 
     @PostMapping()
     ResponseEntity<BandDto> saveBand(@RequestBody BandDto bandDto) {
