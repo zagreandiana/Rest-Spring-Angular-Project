@@ -16,10 +16,14 @@ import java.util.List;
 import java.util.Optional;
 
 @Slf4j
+// @Slf4j is used for logs (lombok)
 @Service
 public class UserServiceImpl implements UserService {
 
     @Autowired
+    // @Autowired allows Spring to resolve and inject collaborating beans into our bean
+    // after enabling annotation injection, we can use autowiring on properties, setters, and constructors
+
     private UserRepository userRepository;
 
     @Override
@@ -42,6 +46,10 @@ public class UserServiceImpl implements UserService {
         log.debug("### Entering read user method.");
         Optional<User> optional = userRepository.findById(id);
 
+        // if an Optional object contains a value => is present
+        // if it doesn't contain a value => is empty
+        // in this case if a user is empty I throw my own exception with a specific message
+
         User user = optional.orElseThrow(
                 () -> new ServiceException(ExceptionMessages.ENTITY_WITH_GIVEN_ID_DOES_NOT_EXIST.message));
         log.debug("### Exiting read user method.");
@@ -60,6 +68,13 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
+
+    // the transactional annotation itself defines the scope of a single database transaction
+    // the database transaction happens inside the scope of a persistence context
+    // transaction propagation are handled automatically
+    // unfortunately is hard to debug
+    // save in db (after update)
+
     public User update(Long id, User user) {
         log.debug("### Entering update users method.");
         Optional<User> optional = userRepository.findById(id);
@@ -82,6 +97,11 @@ public class UserServiceImpl implements UserService {
     public User delete(Long id) {
         log.debug("### Entering delete user method.");
         Optional<User> optional = userRepository.findById(id);
+
+        // here I used Optional because the user that I wanna delete
+        // may or may not be present
+        // thus, just in case if the user is present I will delete it
+        // in addition, calling the "orElseThrow" method helps me manage exceptions
 
         User userToBeDeleted = optional.orElseThrow(
                 () -> new ServiceException(ExceptionMessages.ENTITY_WITH_GIVEN_ID_DOES_NOT_EXIST.message));

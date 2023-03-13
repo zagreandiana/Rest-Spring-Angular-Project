@@ -13,9 +13,14 @@ import java.util.List;
 import java.util.Optional;
 
 @Slf4j
+// @Slf4j is used for logs (lombok)
+
 @Service
 public class AlbumServiceImpl implements AlbumService {
     @Autowired
+    // @Autowired allows Spring to resolve and inject collaborating beans into our bean
+    // after enabling annotation injection, we can use autowiring on properties, setters, and constructors
+
     private AlbumRepository albumRepository;
 
     @Override
@@ -30,6 +35,11 @@ public class AlbumServiceImpl implements AlbumService {
     public Album readOne(Long id) {
         log.debug("### Entering readOne album method.");
         Optional<Album> album = albumRepository.findById(id);
+
+        // if an Optional object contains a value => is present
+        // if it doesn't contain a value => is empty
+        // in this case if an album is empty I throw my own exception with a specific message
+
         if (album.isEmpty()) {
             throw new RepositoryException(ExceptionMessages.ENTITY_WITH_GIVEN_ID_DOES_NOT_EXIST.message);
         }
@@ -48,10 +58,17 @@ public class AlbumServiceImpl implements AlbumService {
 
     @Override
     @Transactional
+    // the transactional annotation itself defines the scope of a single database transaction
+    // the database transaction happens inside the scope of a persistence context
+    // transaction propagation are handled automatically
+    // unfortunately is hard to debug
+    // save in db (after update)
+
     public Album update(Album album) {
         log.debug("### Entering update album method.");
         Optional<Album> albumOptional = albumRepository.findById(album.getId());
-        Album albumToBeUpdated = albumOptional.orElseThrow(() -> new RepositoryException(ExceptionMessages.ENTITY_WITH_GIVEN_ID_ALREADY_EXISTS.message));
+        Album albumToBeUpdated = albumOptional.orElseThrow(
+                () -> new RepositoryException(ExceptionMessages.ENTITY_WITH_GIVEN_ID_ALREADY_EXISTS.message));
 
         albumToBeUpdated.setTitle(album.getTitle());
         albumToBeUpdated.setGenre(album.getGenre());
@@ -63,12 +80,19 @@ public class AlbumServiceImpl implements AlbumService {
         return albumToBeUpdated;
     }
 
-    @Transactional
+
     @Override
     public Album delete(Long id) {
         log.debug("### Entering delete album method.");
         Optional<Album> albumOptional = albumRepository.findById(id);
-        Album albumToBeDeleted = albumOptional.orElseThrow(() -> new RepositoryException(ExceptionMessages.ENTITY_WITH_GIVEN_ID_DOES_NOT_EXIST.message));
+
+        // here I used Optional because the album that I wanna delete
+        // may or may not be present
+        // thus, just in case if the album is present I will delete it
+        // in addition, calling the "orElseThrow" method helps me manage exceptions
+
+        Album albumToBeDeleted = albumOptional.orElseThrow(
+                () -> new RepositoryException(ExceptionMessages.ENTITY_WITH_GIVEN_ID_DOES_NOT_EXIST.message));
 
         albumToBeDeleted.setArtist_id(null);
         albumToBeDeleted.setBand_id(null);
