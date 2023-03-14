@@ -4,9 +4,7 @@ package ro.ubb.music.core.service;
 import ro.ubb.music.core.model.Band;
 
 import java.sql.Date;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public interface BandService {
     Band create(Band band);

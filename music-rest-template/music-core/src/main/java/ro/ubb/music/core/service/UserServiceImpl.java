@@ -11,7 +11,6 @@ import ro.ubb.music.core.repository.UserRepository;
 import ro.ubb.music.core.utils.ExceptionMessages;
 import ro.ubb.music.core.utils.UserRoles;
 import ro.ubb.music.core.utils.UserStatuses;
-
 import java.util.List;
 import java.util.Optional;
 

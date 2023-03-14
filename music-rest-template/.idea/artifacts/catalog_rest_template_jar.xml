@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="catalog-rest-template:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/catalog_rest_template_jar</output-path>
+    <root id="archive" name="catalog-rest-template.jar" />
+  </artifact>
+</component>

@@ -1,6 +1,5 @@
 package ro.ubb.music.core.service;
 
-import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -8,17 +7,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ro.ubb.music.core.exceptions.ServiceException;
 import ro.ubb.music.core.model.Band;
-import ro.ubb.music.core.model.User;
 import ro.ubb.music.core.repository.BandRepository;
 import ro.ubb.music.core.utils.ExceptionMessages;
-
-
-import java.beans.Transient;
 import java.sql.Date;
-import java.time.LocalDate;
-import java.time.ZoneId;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 @Slf4j

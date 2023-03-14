@@ -7,7 +7,6 @@ import org.springframework.web.client.RestTemplate;
 import ro.ubb.music.web.dto.*;
 import ro.ubb.music.web.utils.UserRoles;
 import ro.ubb.music.web.utils.UserStatuses;
-
 import java.sql.Date;
 import java.sql.Time;
 import java.util.List;
@@ -239,7 +238,7 @@ public class TextUi {
     private void sortareAlfabetica() {
         BandDtos bandDtos = restTemplate.getForObject("http://localhost:8080/api/bands/sortare", BandDtos.class);
 
-        bandDtos.getBandDtos().forEach(x -> System.out.println(x));
+        bandDtos.getBandDtos().forEach(System.out::println);
     }
 
     //
@@ -271,7 +270,7 @@ public class TextUi {
 
     private void readAllAlbums() {
         AlbumDtos albumDtos = restTemplate.getForObject("http://localhost:8080/api/albums", AlbumDtos.class);
-        albumDtos.getAlbumDtos().forEach(x -> System.out.println(x));
+        albumDtos.getAlbumDtos().forEach(System.out::println);
     }
 
     private void updateAlbum() {
@@ -310,7 +309,7 @@ public class TextUi {
 
         System.out.println("");
         System.out.println("The albums sorted by genre are: ");
-        albumDtos.getAlbumDtos().forEach(x -> System.out.println(x));
+        albumDtos.getAlbumDtos().forEach(System.out::println);
     }
 
     private void readAlbumsSorted() {
@@ -320,12 +319,12 @@ public class TextUi {
         String titleMessage = typeOfSort.equals("a") ? "Albums sorted ASC: " : "Albums sorted DESC: ";
         System.out.println();
         System.out.println(titleMessage);
-        albumDtos.getAlbumDtos().forEach(x -> System.out.println(x));
+        albumDtos.getAlbumDtos().forEach(System.out::println);
     }
 
     private void readAllBands() {
         BandDtos bandDtos = restTemplate.getForObject("http://localhost:8080/api/bands", BandDtos.class);
-        bandDtos.getBandDtos().forEach(x -> System.out.println(x));
+        bandDtos.getBandDtos().forEach(System.out::println);
     }
 
 
@@ -371,6 +370,7 @@ public class TextUi {
     private void createArtist() {
         ArtistDto dto = readArtistInformation();
         ArtistDto savedArtist = restTemplate.postForObject("http://localhost:8080/api/artists", dto, ArtistDto.class);
+        System.out.println(savedArtist);
 
     }
 

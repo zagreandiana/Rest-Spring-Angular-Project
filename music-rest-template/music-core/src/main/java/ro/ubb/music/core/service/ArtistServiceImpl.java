@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ro.ubb.music.core.exceptions.ServiceException;
 import ro.ubb.music.core.model.Artist;
-import ro.ubb.music.core.model.User;
 import ro.ubb.music.core.repository.ArtistRepository;
 import ro.ubb.music.core.utils.ExceptionMessages;
 
