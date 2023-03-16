@@ -1,9 +1,6 @@
 package ro.ubb.music.core.model;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,6 +11,7 @@ import java.sql.Time;
 @NoArgsConstructor
 @Builder
 @Entity(name = "songs")
+@ToString
 public class Song extends BaseEntity<Long> {
 
     private String title;
@@ -33,15 +31,5 @@ public class Song extends BaseEntity<Long> {
         this.title = title;
         this.albumId = albumId;
         this.time = time;
-    }
-
-    @Override
-    public String toString() {
-        return "Song{" +
-                "title='" + title + '\'' +
-                ", album_id=" + albumId +
-                ", time=" + time +
-                ", id=" + id +
-                '}';
     }
 }

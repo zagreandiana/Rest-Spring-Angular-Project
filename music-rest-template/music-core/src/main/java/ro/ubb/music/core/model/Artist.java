@@ -8,6 +8,7 @@ import java.sql.Date;
 
 @Getter
 @Setter
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -25,15 +26,5 @@ public class Artist extends BaseEntity<Long> {
     private Date activityEndDate;
 
 
-    @Override
-    public String toString() {
-        return "Artist{" +
-                "id=" + id +
-                ",first_name='" + firstName + '\'' +
-                ", last_name='" + lastName + '\'' +
-                ", stage_name='" + stageName + '\'' +
-                ", activity_start_date=" + activityStartDate +
-                ", activity_end_date=" + activityEndDate +
-                '}';
-    }
+
 }

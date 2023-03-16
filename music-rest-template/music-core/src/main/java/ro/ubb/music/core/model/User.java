@@ -11,6 +11,7 @@ import javax.persistence.Enumerated;
 
 @Getter
 @Setter
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -28,16 +29,4 @@ public class User extends BaseEntity<Long> {
     @Enumerated(EnumType.STRING)
     private UserStatuses status;
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", role=" + role +
-                ", status=" + status +
-                '}';
-    }
 }

@@ -10,6 +10,7 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 @Builder
 @Entity(name = "bands")
 public class Band extends BaseEntity<Long> {
@@ -20,13 +21,5 @@ public class Band extends BaseEntity<Long> {
     @Column(name = "activity_end_date")
     private Date activityEndData;
 
-    @Override
-    public String toString() {
-        return "Band{" +
-                "name='" + name + '\'' +
-                ", activityStartData=" + activityStartData +
-                ", activityEndData=" + activityEndData +
-                ", id=" + id +
-                '}';
-    }
+
 }
